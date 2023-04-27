@@ -1,0 +1,23 @@
+[package]
+name = "java-threads-tracker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+crate-type = [ "cdylib" ]
+
+[dependencies]
+dlopen = "0.1.8"
+dlopen_derive = "0.1.4"
+env_logger = "0.10.0"
+format-bytes = "0.3.0"
+# jvmti = "0.5.0"
+jvmti = { path = "../jvmti-rust/jvmti" }
+lazy_static = "1.4.0"
+libc = "0.2.142"
+log = "0.4.17"
+tokio = { version = "1.28.0", features = [ "rt", "net", "io-util", "sync", "macros" ] }
+tokio-stream = "0.1.14"
